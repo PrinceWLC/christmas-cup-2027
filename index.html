@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Рождественский кубок 2027 — семейный хоккейный турнир, 6–8 января</title>
-<meta name="description" content="Семейный хоккейный турнир «Рождественский кубок»: 6–8 января 2027, арена Ice Athletics, Москва. 8 команд, 20 матчей, вход свободный. Играет папа — празднует вся семья.">
+<meta name="description" content="Семейный хоккейный турнир «Рождественский кубок»: 8–10 января 2027, арена Ice Athletics, Москва. 8 команд, 20 матчей, вход свободный. Играет папа — празднует вся семья.">
 <style>
 @font-face{font-family:'Oswald';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/oswald-cyrillic-400-normal.woff2) format('woff2');unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:'Oswald';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/oswald-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD,U+20BD}
@@ -498,6 +498,28 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .marq .tr{animation:none}
 }
+/* ===== v4: winter town ===== */
+.flab{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin:56px 0 20px}
+.flab span{font-family:var(--disp);font-size:clamp(26px,2.6vw,36px);font-weight:600;text-transform:uppercase;line-height:1}
+.flab em{font-style:normal;font-size:14px;letter-spacing:2.5px;text-transform:uppercase;color:var(--red)}
+.town{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.town .ph{aspect-ratio:4/5}
+.town .ph.wide{grid-column:span 2;aspect-ratio:auto;min-height:260px}
+.town .ph.wide img{position:absolute;inset:0}
+.town .ph::after,.inside .ph::after{background:linear-gradient(180deg,transparent 42%,rgba(11,22,38,.82))}
+.town .ph figcaption b,.inside .ph figcaption b{font-size:clamp(20px,1.7vw,24px)}
+.inside .ph::after{background:linear-gradient(180deg,transparent 30%,rgba(11,22,38,.9))}
+.town .ph figcaption span,.inside .ph figcaption span{font-size:13.5px;line-height:1.4}
+.tcard{border-radius:28px;background:linear-gradient(155deg,var(--navy3),var(--navy2));color:var(--ice);padding:28px;display:flex;flex-direction:column;gap:12px;justify-content:flex-end}
+.tcard .ln-ic{width:44px;height:44px;margin-bottom:auto}
+.tcard b{font-family:var(--disp);font-size:clamp(22px,1.9vw,28px);font-weight:600;text-transform:uppercase;line-height:1.05}
+.tcard ul{display:flex;flex-direction:column;gap:8px}
+.tcard li{list-style:none;font-size:15px;color:var(--softd);display:flex;gap:10px;line-height:1.35}
+.tcard li::before{content:"✓";color:var(--gold2)}
+.inside{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
+.inside .ph{aspect-ratio:4/3}
+@media(max-width:960px){.town{grid-template-columns:1fr 1fr}.town .ph.wide{aspect-ratio:4/3;min-height:0}.inside{grid-template-columns:1fr}.inside .ph{aspect-ratio:16/11}}
+@media(max-width:600px){.town{grid-template-columns:1fr}.town .ph,.town .ph.wide{grid-column:auto;aspect-ratio:4/3}.inside .ph{aspect-ratio:4/3}.tcard{padding:24px}.tcard .ln-ic{margin-bottom:6px}}
 </style>
 </head>
 <body>
@@ -510,9 +532,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <span>Рождественский кубок</span>
     </a>
     <div class="links">
-      <a href="#idea">Идея</a><a href="#family">Семьям</a><a href="#fest">Праздник</a><a href="#program">Программа</a><a href="#bracket">Сетка</a><a href="#teams">Командам</a><a href="#arena">Арена</a><a href="#partners">Партнёрам</a>
+      <a href="#idea">Идея</a><a href="#family">Семьям</a><a href="#fest">Праздник</a><a href="#program">Программа</a><a href="#bracket">Сетка</a><a href="#teams">Командам</a><a href="#arena">Арена</a><a href="#faq">Вопросы</a>
     </div>
-    <a href="#partners" class="btn btn-red">Стать партнёром</a>
+    <a href="#teams" class="btn btn-red">Заявить команду</a>
   </div>
 </nav>
 
@@ -554,11 +576,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     </div>
     <div class="slogan fade" style="animation-delay:1.4s">Играет папа <span>—</span> празднует вся&nbsp;семья</div>
     <div class="hero-meta fade" style="animation-delay:1.6s">
-      <span><b>6–8 января 2027</b></span><span>Арена Ice Athletics</span><span>8 команд · 20 матчей</span><span><b>Вход свободный</b></span>
+      <span><b>8–10 января 2027</b></span><span>Арена Ice Athletics</span><span>8 команд · 20 матчей</span><span><b>Вход свободный</b></span>
     </div>
     <div class="hero-cta fade" style="animation-delay:1.8s">
       <a href="#program" class="btn btn-red">Программа трёх дней <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      <a href="#partners" class="btn btn-ghost">Стать партнёром</a>
+      <a href="#teams" class="btn btn-ghost">Заявить команду</a>
     </div>
     <div class="count fade" style="animation-delay:2s" aria-label="До первого вбрасывания">
       <span class="lbl">До первого вбрасывания</span>
@@ -571,8 +593,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 </header>
 
 <div class="marq" aria-hidden="true"><div class="tr">
-  <span>6–8 января 2027</span><span>Играет папа — празднует вся семья</span><span>8 команд</span><span>20 матчей</span><span>Вход свободный</span><span>Сочельник · Рождество · Семейный финал</span>
-  <span>6–8 января 2027</span><span>Играет папа — празднует вся семья</span><span>8 команд</span><span>20 матчей</span><span>Вход свободный</span><span>Сочельник · Рождество · Семейный финал</span>
+  <span>8–10 января 2027</span><span>Играет папа — празднует вся семья</span><span>8 команд</span><span>20 матчей</span><span>Вход свободный</span><span>Группы · Сетки · Семейный финал</span>
+  <span>8–10 января 2027</span><span>Играет папа — празднует вся семья</span><span>8 команд</span><span>20 матчей</span><span>Вход свободный</span><span>Группы · Сетки · Семейный финал</span>
 </div></div>
 
 <!-- IDEA -->
@@ -633,8 +655,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <span class="eyebrow rv">Семьям</span>
       <h2 class="rv">Семья — <em class="g">часть команды</em></h2>
       <p class="lead rv">Семьи игроков не просто сидят на трибунах. Они вписаны в сам турнир — от первого вбрасывания до общего фото на льду.</p>
-      <div class="fam-quote rv">Самые громкие болельщики —&nbsp;у&nbsp;борта<small>А 8 января лёд открыт для всех семей: мастер-класс для детей и семейное катание.</small></div>
-      <figure class="ph rv-p fam-ph"><img src="img/skating.jpg" alt="Катание на льду арены" loading="lazy"><figcaption><b>8 января — семейный лёд</b><span>Тот же лёд, на котором играл папа</span></figcaption></figure>
+      <div class="fam-quote rv">Самые громкие болельщики —&nbsp;у&nbsp;борта<small>А 10 января после закрытия лёд открыт для всех семей: мастер-класс для детей и семейное катание.</small></div>
+      <figure class="ph rv-p fam-ph"><img src="img/skating.jpg" alt="Катание на льду арены" loading="lazy"><figcaption><b>10 января — семейный лёд</b><span>Тот же лёд, на котором играл папа</span></figcaption></figure>
     </div>
     <div class="rituals">
       <div class="rit rv draw-on">
@@ -667,35 +689,38 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="head">
       <span class="eyebrow rv">Праздник на арене</span>
       <h2 class="rv">Пока папа на льду, <em class="r">у семьи есть куда пойти</em></h2>
-      <p class="lead rv">Зоны открываются за полчаса до первой игры и работают до последнего свистка. Выберите зону.</p>
+      <p class="lead rv">Зимний городок у арены и праздничные залы внутри — для мам и детей, бесплатно. Зоны открываются за полчаса до первой игры и работают до последнего свистка.</p>
     </div>
-    <div class="zones">
-      <div class="ztabs rv-l" role="tablist" aria-label="Зоны праздника">
-        <button class="ztab on" role="tab" aria-selected="true" data-z="0"><i>01</i><b>Бросковая зона</b><span>дети · мамы · папы</span></button>
-        <button class="ztab" role="tab" aria-selected="false" data-z="1"><i>02</i><b>Детская зона</b><span>с аниматорами</span></button>
-        <button class="ztab" role="tab" aria-selected="false" data-z="2"><i>03</i><b>Фотозона</b><span>печать на месте</span></button>
-        <button class="ztab" role="tab" aria-selected="false" data-z="3"><i>04</i><b>Ярмарка</b><span>чай, выпечка, мерч</span></button>
-        <button class="ztab" role="tab" aria-selected="false" data-z="4"><i>05</i><b>Семейный лёд</b><span>8 января</span></button>
-      </div>
-      <div class="zview rv-s" role="tabpanel" aria-live="polite">
-        <div class="glow"></div>
-        <div class="zn" id="zn">01</div>
-        <svg class="zart ln-ic go" id="zart" viewBox="0 0 240 200" stroke-width="4"></svg>
-        <div class="zbody" id="zbody">
-          <span class="tag" id="ztag">127 м² · четверо ворот</span>
-          <h3 id="zh">Бросковая зона</h3>
-          <p id="zp">Конкурс «Самый сильный бросок» с радаром скорости в трёх зачётах: дети, мамы, папы. Таблица лидеров на экране, призы лучшим в конце дня.</p>
-        </div>
+
+    <div class="flab rv"><span>На улице</span><em>зимний городок у арены</em></div>
+    <div class="town">
+      <figure class="ph wide rv-p"><img src="img/f_maze.jpg" alt="Снежный лабиринт, снеговик и дорожка для керлинга шайбами у арены" loading="lazy" style="object-position:50% 60%"><span class="badge">Для детей</span><figcaption><b>Снежный городок</b><span>Лабиринт, снеговики и керлинг шайбами. Мамы рядом — на скамейках с пледами и горячим чаем</span></figcaption></figure>
+      <figure class="ph rv-p" style="transition-delay:.08s"><img src="img/f_tree.jpg" alt="Ёлка и фотозона в виде хоккейных ворот" loading="lazy" style="object-position:50% 45%"><span class="badge" style="background:var(--gold);color:var(--navy)">Фотозона</span><figcaption><b>Главная ёлка</b><span>Ворота-фоторамка с клюшками и подарками — семейное фото на входе</span></figcaption></figure>
+      <figure class="ph rv-p" style="transition-delay:.16s"><img src="img/f_slide.jpg" alt="Ледяная горка с тюбингами и домик ярмарки" loading="lazy" style="object-position:60% 60%"><figcaption><b>Горка и ярмарка</b><span>Ледяная горка для малышей, рядом домик с выпечкой и мерчем</span></figcaption></figure>
+      <figure class="ph rv-p"><img src="img/f_snowball.jpg" alt="Мама и дети бросают снежки в мишени у забора" loading="lazy" style="object-position:50% 70%"><figcaption><b>Снежный тир</b><span>Сбей мишени-шайбы снежками и оцени снеговиков-хоккеистов</span></figcaption></figure>
+      <figure class="ph rv-p" style="transition-delay:.08s"><img src="img/f_minihockey.jpg" alt="Дети играют в мини-хоккей на снегу" loading="lazy" style="object-position:50% 62%"><figcaption><b>Мини-хоккей в снегу</b><span>Ворота, клюшки и мягкий мяч — играем как папа</span></figcaption></figure>
+      <figure class="ph rv-p" style="transition-delay:.16s"><img src="img/f_tea.jpg" alt="Аллея с домиком горячего чая и скамейками" loading="lazy" style="object-position:50% 60%"><figcaption><b>Аллея горячего чая</b><span>Чай, скамейки и гирлянды — передышка между матчами</span></figcaption></figure>
+      <div class="tcard rv" style="transition-delay:.24s">
+        <svg class="ln-ic" viewBox="0 0 44 44" stroke="#E8B84A" stroke-width="2.5"><path d="M22 4v36M6 13l32 18M6 31l32-18"/><path d="M17 7l5 4 5-4M17 37l5-4 5 4"/></svg>
+        <b>Тепло и спокойно</b>
+        <ul><li>Уличные обогреватели и пледы</li><li>Без открытого огня</li><li>Игровые зоны огорожены</li><li>Греться — в кафе с видом на лёд</li></ul>
       </div>
     </div>
 
+    <div class="flab rv"><span>Внутри арены</span><em>пока идёт матч</em></div>
+    <div class="inside">
+      <figure class="ph rv-p"><img src="img/f_studio.jpg" alt="Мама в джерси команды делает бросок для фотографа" loading="lazy" style="object-position:50% 70%"><span class="badge">Для мам</span><figcaption><b>Фотостудия «Мама забивает»</b><span>Мама в джерси команды папы «забивает» в постановочной съёмке. Фото печатаем сразу — открытка на память</span></figcaption></figure>
+      <figure class="ph rv-p" style="transition-delay:.1s"><img src="img/f_facepaint.jpg" alt="Аквагрим для детей в праздничном зале с украшенными тренажёрами" loading="lazy"><span class="badge" style="background:var(--gold);color:var(--navy)">Для детей</span><figcaption><b>Аквагрим</b><span>Эмблема команды, номер папы, снежинки. Тренажёры в гирляндах — фотозона «Тренируюсь как папа»</span></figcaption></figure>
+      <figure class="ph rv-p" style="transition-delay:.2s"><img src="img/f_drawing.jpg" alt="Дети рисуют на конкурсе рисунков в праздничном зале" loading="lazy"><figcaption><b>Конкурс рисунков</b><span>«Мой папа — хоккеист», открытки и плакаты. Рядом уголок для мам с малышами</span></figcaption></figure>
+    </div>
+
     <div class="events">
-      <div class="ev rv"><svg class="ln-ic" viewBox="0 0 44 44" stroke="#C8322B" stroke-width="2.5"><rect x="9" y="5" width="26" height="34" rx="4"/><circle cx="17" cy="15" r="2.5"/><circle cx="27" cy="22" r="2.5"/><circle cx="17" cy="29" r="2.5"/></svg><b>Детский квест-паспорт</b><p>5–6 станций по арене, штамп на каждой, подарок за полный паспорт.</p></div>
+      <div class="ev rv"><svg class="ln-ic" viewBox="0 0 44 44" stroke="#C8322B" stroke-width="2.5"><rect x="9" y="5" width="26" height="34" rx="4"/><circle cx="17" cy="15" r="2.5"/><circle cx="27" cy="22" r="2.5"/><circle cx="17" cy="29" r="2.5"/></svg><b>Детский квест-паспорт</b><p>Станции по всему городку и арене, штамп на каждой, подарок за полный паспорт.</p></div>
       <div class="ev rv" style="transition-delay:.06s"><svg class="ln-ic" viewBox="0 0 44 44" stroke="#C8322B" stroke-width="2.5"><rect x="5" y="9" width="34" height="26" rx="3"/><path d="M5 29l10-9 8 7 6-5 10 8"/><circle cx="29" cy="17" r="3"/></svg><b>«Мой папа — хоккеист»</b><p>Конкурс детских рисунков, выставка в холле, награды на закрытии.</p></div>
       <div class="ev rv" style="transition-delay:.12s"><svg class="ln-ic" viewBox="0 0 44 44" stroke="#C8322B" stroke-width="2.5"><rect x="16" y="5" width="12" height="20" rx="6"/><path d="M10 20c0 7 5 12 12 12s12-5 12-12M22 32v7M15 39h14"/></svg><b>Ведущий и диджей</b><p>Составы, счёт, анонсы и викторины с трибунами во время заливки.</p></div>
       <div class="ev rv" style="transition-delay:.18s"><svg class="ln-ic" viewBox="0 0 44 44" stroke="#C8322B" stroke-width="2.5"><rect x="7" y="18" width="30" height="20" rx="2"/><path d="M5 12h34v6H5zM22 12v26M22 12c-3-6-10-6-10-1 0 3 6 1 10 1 4 0 10 2 10-1 0-5-7-5-10 1"/></svg><b>Рождественский персонаж</b><p>Подарки, фото с детьми и вбрасывание в финале.</p></div>
-      <div class="ev rv" style="transition-delay:.24s"><svg class="ln-ic" viewBox="0 0 44 44" stroke="#C8322B" stroke-width="2.5"><path d="M8 6l10 26h-6M36 6L26 32h6"/><ellipse cx="22" cy="37" rx="5" ry="2"/></svg><b>Конкурс бросков</b><p>Итоги в каждом зачёте и призы лучшим — в конце игрового дня.</p></div>
-      <div class="ev hot rv" style="transition-delay:.3s"><svg class="ln-ic" viewBox="0 0 44 44" stroke="#fff" stroke-width="2.5"><circle cx="14" cy="10" r="5"/><circle cx="32" cy="14" r="3.5"/><path d="M14 15v13l-4 12M14 28l4 12M32 18v9l-3 9M32 27l3 9M18 20l10 2"/></svg><b>«Дети против пап»</b><p>15 минут на закрытии. Папы играют вполсилы, дети побеждают.</p></div>
+      <div class="ev rv" style="transition-delay:.24s"><svg class="ln-ic" viewBox="0 0 44 44" stroke="#C8322B" stroke-width="2.5"><rect x="5" y="12" width="34" height="24" rx="4"/><circle cx="22" cy="24" r="7"/><path d="M15 12l3-5h8l3 5"/></svg><b>Фото на память</b><p>Мгновенная печать в фирменной рамке турнира — у ёлки и в фотостудии.</p></div>
+      <div class="ev hot rv" style="transition-delay:.3s"><svg class="ln-ic" viewBox="0 0 44 44" stroke="#fff" stroke-width="2.5"><path d="M8 34c6-2 10-2 14 0s8 2 14 0"/><path d="M14 8v18l-4 6M14 26h8l4 6"/><circle cx="16" cy="6" r="3"/></svg><b>Семейный лёд</b><p>10 января после закрытия — мастер-класс для детей и катание всей семьёй.</p></div>
     </div>
   </div>
 </section>
@@ -706,56 +731,59 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="track" id="track">
       <div class="panel intro">
         <span class="eyebrow" style="color:var(--blue)">Три дня турнира</span>
-        <h2>Сочельник,<br>Рождество,<br><em class="g">семейный финал</em></h2>
-        <p>Матчи идут одновременно на двух полях. Слот матча — 70 минут, после каждого — заливка 15 минут. Между двумя матчами команды в один день — не меньше 1 часа 40 минут.<span class="hide-m"> Листайте дальше.</span></p>
-        <div class="meta"><span><b>3 × 15</b>минут каждый матч</span><span><b>1 ч 40 мин</b>отдых между играми</span><span><b>с 11:00</b>старт игрового дня, 6 января — в 12:00</span></div>
+        <h2>Группы,<br>сетки,<br><em class="g">семейный финал</em></h2>
+        <p>Каждый день — свой этап, и все команды в нём в равных условиях. 8 января играем на двух полях, 9 и 10 января — на одном. Слот матча — 60 минут, у матчей за места и финала — 70, после каждого — заливка 15 минут.<span class="hide-m"> Листайте дальше.</span></p>
+        <div class="meta"><span><b>3 × 15</b>минут каждый матч</span><span><b>1 ч 15 мин</b>минимум отдыха между играми</span><span><b>1 день — 1 этап</b>все в равных условиях</span></div>
       </div>
 
       <div class="panel day">
-        <div class="num">06</div>
-        <div class="ph"><div><span class="tag">6 января · среда</span><h3>Сочельник</h3></div><span class="sub">Открытие и групповой этап</span></div>
+        <div class="num">08</div>
+        <div class="ph"><div><span class="tag">8 января · пятница</span><h3>Рождественский старт</h3></div><span class="sub">Групповой этап · лёд А и лёд Б</span></div>
         <div class="pbody">
           <div class="tline">
-            <div class="key"><span class="t">12:00</span><span class="w"><b>Торжественное открытие</b><span>8 команд выходят на лёд с детьми · гимн · вынос кубка · первую шайбу вбрасывает ребёнок</span></span></div>
-            <div><span class="t">12:15–13:25</span><span class="w"><b>Группа A, 1 тур</b><span>Поле 1: №1 A1 – A2 · Поле 2: №2 A3 – A4</span></span></div>
-            <div><span class="t">13:40–14:50</span><span class="w"><b>Группа B, 1 тур</b><span>Поле 1: №3 B1 – B2 · Поле 2: №4 B3 – B4</span></span></div>
-            <div><span class="t">15:05–16:15</span><span class="w"><b>Группа A, места в группе</b><span>Поле 1: №5 за 1-е место · Поле 2: №6 за 3-е место</span></span></div>
-            <div><span class="t">16:30–17:40</span><span class="w"><b>Группа B, места в группе</b><span>Поле 1: №7 за 1-е место · Поле 2: №8 за 3-е место</span></span></div>
+            <div><span class="t">08:00–09:00</span><span class="w"><b>Группа A, 1 тур</b><span>Лёд Б: №1 A1 – A2</span></span></div>
+            <div><span class="t">09:15–10:15</span><span class="w"><b>Группа A, 1 тур</b><span>Лёд Б: №2 A3 – A4</span></span></div>
+            <div><span class="t">10:30 · 10:45</span><span class="w"><b>Группа B, 1 тур</b><span>Лёд Б 10:30: №3 B1 – B2 · Лёд А 10:45: №4 B3 – B4</span></span></div>
+            <div><span class="t">11:45 · 12:00</span><span class="w"><b>Группа A, места в группе</b><span>Лёд Б 11:45: №5 за 1-е · Лёд А 12:00: №6 за 3-е</span></span></div>
+            <div><span class="t">13:00–14:00</span><span class="w"><b>Группа B, за 1-е место</b><span>Лёд Б: №7</span></span></div>
+            <div><span class="t">14:15–15:15</span><span class="w"><b>Группа B, за 3-е место</b><span>Лёд Б: №8 · известны места в группах</span></span></div>
           </div>
-          <div class="around"><small>Вокруг льда</small><ul><li>С 11:30 открываются все зоны</li><li>Старт конкурса бросков и детского квеста</li><li>Дети рисуют плакаты для своих команд</li><li>Ведущий представляет команды и их семьи</li></ul></div>
+          <div class="around"><small>Вокруг льда</small><ul><li>Зоны открываются за полчаса до первой игры</li><li>Открываются зимний городок и детский квест</li><li>Дети рисуют плакаты для своих команд</li><li>Ведущий представляет команды и их семьи</li></ul></div>
         </div>
       </div>
 
       <div class="panel day">
-        <div class="num">07</div>
-        <div class="ph"><div><span class="tag">7 января · четверг</span><h3>Рождество</h3></div><span class="sub">Верхняя и нижняя сетки</span></div>
+        <div class="num">09</div>
+        <div class="ph"><div><span class="tag">9 января · суббота</span><h3>Святки</h3></div><span class="sub">Верхняя и нижняя сетки</span></div>
         <div class="pbody">
           <div class="tline">
-            <div><span class="t">11:00–12:10</span><span class="w"><b>Верхняя сетка, 1 тур</b><span>Поле 1: №9 1A – 2B · Поле 2: №10 1B – 2A</span></span></div>
-            <div><span class="t">12:25–13:35</span><span class="w"><b>Нижняя сетка, 1 тур</b><span>Поле 1: №11 3A – 4B · Поле 2: №12 3B – 4A</span></span></div>
-            <div><span class="t">13:50–15:00</span><span class="w"><b>Верхняя сетка, 2 тур</b><span>Поле 1: №13 победители · Поле 2: №14 проигравшие</span></span></div>
-            <div><span class="t">15:15–16:25</span><span class="w"><b>Нижняя сетка, 2 тур</b><span>Поле 1: №15 победители · Поле 2: №16 проигравшие</span></span></div>
-            <div class="key"><span class="t">16:25</span><span class="w"><b>Известны финалисты</b><span>и пары всех матчей за места</span></span></div>
+            <div><span class="t">12:15 · 13:30</span><span class="w"><b>Верхняя сетка, 1 тур</b><span>№9 1A – 2B · №10 1B – 2A</span></span></div>
+            <div><span class="t">14:45 · 16:00</span><span class="w"><b>Нижняя сетка, 1 тур</b><span>№11 3A – 4B · №12 3B – 4A</span></span></div>
+            <div><span class="t">17:15 · 18:30</span><span class="w"><b>Верхняя сетка, 2 тур</b><span>№13 победители · №14 проигравшие</span></span></div>
+            <div><span class="t">19:45 · 21:00</span><span class="w"><b>Нижняя сетка, 2 тур</b><span>№15 победители · №16 проигравшие</span></span></div>
+            <div class="key"><span class="t">22:00</span><span class="w"><b>Известны финалисты</b><span>и пары всех матчей за места</span></span></div>
           </div>
-          <div class="around"><small>Вокруг льда</small><ul><li>Рождественский персонаж и подарки детям</li><li>Мастер-класс рождественских открыток</li><li>Рождественская выпечка на ярмарке</li><li>Продолжение квеста и конкурса бросков</li></ul></div>
+          <div class="around"><small>Вокруг льда</small><ul><li>Рождественский персонаж и подарки детям</li><li>Мастер-класс рождественских открыток</li><li>Рождественская выпечка на ярмарке</li><li>Фотостудия «Мама забивает»</li></ul></div>
         </div>
       </div>
 
       <div class="panel day fin">
-        <div class="num">08</div>
-        <div class="ph"><div><span class="tag">8 января · пятница</span><h3>Семейный финал</h3></div><span class="sub">Игры за места, финал, награждение</span></div>
+        <div class="num">10</div>
+        <div class="ph"><div><span class="tag">10 января · воскресенье</span><h3>Семейный финал</h3></div><span class="sub">Открытие, игры за места, финал, награждение</span></div>
         <div class="pbody">
           <div class="tline">
-            <div><span class="t">11:00–12:10</span><span class="w"><b>Матчи за 5-е и 7-е места</b><span>Поле 1: №18 за 5-е · Поле 2: №17 за 7-е</span></span></div>
-            <div><span class="t">12:25–13:35</span><span class="w"><b>Матч за 3-е место · семейный лёд</b><span>Поле 1: №19 · Поле 2: мастер-класс и семейное катание</span></span></div>
-            <div class="key"><span class="t">13:50–15:00</span><span class="w"><b>ФИНАЛ</b><span>Поле 1: №20 победители м.13 и м.15</span></span></div>
-            <div><span class="t">15:05–16:15</span><span class="w"><b>Закрытие и награждение</b><span>15:05 «Дети против пап» · 15:30 личные призы · 15:40 кубок · 16:00 общее фото</span></span></div>
+            <div class="key"><span class="t">10:00</span><span class="w"><b>Открытие финального дня</b><span>8 команд выходят на лёд с детьми · гимн · вынос кубка · первую шайбу вбрасывает ребёнок</span></span></div>
+            <div><span class="t">10:15 · 11:40</span><span class="w"><b>Матчи за 7-е и 5-е места</b><span>№17 за 7-е · №18 за 5-е</span></span></div>
+            <div><span class="t">13:05–14:15</span><span class="w"><b>Матч за 3-е место</b><span>№19</span></span></div>
+            <div class="key"><span class="t">14:30–15:40</span><span class="w"><b>ФИНАЛ</b><span>№20 победители м.13 и м.15</span></span></div>
+            <div><span class="t">15:45–16:55</span><span class="w"><b>Закрытие и награждение</b><span>15:45 детские конкурсы · 16:10 личные призы · 16:20 кубок · 16:40 общее фото</span></span></div>
+            <div><span class="t">17:10–18:10</span><span class="w"><b>Семейный лёд</b><span>мастер-класс для детей и семейное катание</span></span></div>
           </div>
-          <div class="around"><small>Вокруг льда</small><ul><li>Итоги конкурсов бросков и рисунков</li><li>Подарки за полный квест-паспорт</li><li>Дети выбирают «Джентльмена турнира»</li><li>Победители провозят кубок по кругу вместе с детьми</li></ul></div>
+          <div class="around"><small>Вокруг льда</small><ul><li>Итоги конкурса рисунков «Мой папа — хоккеист»</li><li>Подарки за полный квест-паспорт</li><li>Дети выбирают «Джентльмена турнира»</li><li>Победители провозят кубок по кругу вместе с детьми</li></ul></div>
         </div>
       </div>
     </div>
-    <div class="hs-days" id="hsdays"><span>6 января</span><span>7 января</span><span>8 января</span></div>
+    <div class="hs-days" id="hsdays"><span>8 января</span><span>9 января</span><span>10 января</span></div>
     <div class="hs-bar"><i id="hsbar"></i></div>
   </div>
 </section>
@@ -766,7 +794,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="head">
       <span class="eyebrow rv">Путь к кубку</span>
       <h2 class="rv">Никто не вылетает</h2>
-      <p class="lead rv">Каждая команда играет пять матчей и борется за своё место до последнего дня. Пары 8 января определяет то, как команда сыграла два матча 7 января. Наведите на итоговый матч, чтобы увидеть путь к нему.</p>
+      <p class="lead rv">Каждая команда играет пять матчей и борется за своё место до последнего дня. Пары 10 января определяет то, как команда сыграла два матча 9 января. Наведите на итоговый матч, чтобы увидеть путь к нему.</p>
     </div>
     <div class="brk-intro">
       <div class="bi rv" data-k="f"><small><i style="background:var(--gold)"></i>2 победы</small><b>Финал</b></div>
@@ -775,11 +803,11 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="bi rv" data-k="s" style="transition-delay:.18s"><small><i style="background:#5C7590"></i>2 поражения</small><b>За 7-е место</b></div>
     </div>
     <div class="brk-box rv-s">
-      <svg class="brk" id="brk" viewBox="0 0 1210 620" role="img" aria-label="Схема турнира: места в группах, два тура 7 января и матчи за места 8 января">
-        <text class="col" x="0" y="14">6 ЯНВАРЯ · МЕСТА В ГРУППАХ</text>
-        <text class="col" x="290" y="14">7 ЯНВАРЯ · 1 ТУР</text>
-        <text class="col" x="600" y="14">7 ЯНВАРЯ · 2 ТУР</text>
-        <text class="col" x="920" y="14">8 ЯНВАРЯ · ИГРЫ ЗА МЕСТА</text>
+      <svg class="brk" id="brk" viewBox="0 0 1210 620" role="img" aria-label="Схема турнира: места в группах 8 января, два тура сеток 9 января и матчи за места 10 января">
+        <text class="col" x="0" y="14">8 ЯНВАРЯ · МЕСТА В ГРУППАХ</text>
+        <text class="col" x="290" y="14">9 ЯНВАРЯ · 1 ТУР</text>
+        <text class="col" x="600" y="14">9 ЯНВАРЯ · 2 ТУР</text>
+        <text class="col" x="920" y="14">10 ЯНВАРЯ · ИГРЫ ЗА МЕСТА</text>
         <g transform="translate(0,40)">
           <!-- group → round 1 -->
           <path class="p g dr" pathLength="1" d="M200 35H245V65H290M200 95H245V65"/>
@@ -824,10 +852,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <g class="bx"><rect x="600" y="392" width="230" height="56" rx="14"/><text class="sm" x="620" y="414">№15 · ПОБЕДИТЕЛИ</text><text x="620" y="437">м.11 – м.12</text></g>
           <g class="bx"><rect x="600" y="462" width="230" height="56" rx="14"/><text class="sm" x="620" y="484">№16 · ПРОИГРАВШИЕ</text><text x="620" y="507">м.11 – м.12</text></g>
           <!-- column 4 -->
-          <g class="bx out f" data-k="f"><rect x="920" y="88" width="270" height="64" rx="16"/><text class="sm" x="942" y="112">№20 · 13:50</text><text x="942" y="139" style="font-size:24px;font-weight:600">ФИНАЛ</text></g>
-          <g class="bx out t" data-k="t"><rect x="920" y="218" width="270" height="64" rx="16"/><text class="sm" x="942" y="242">№19 · 12:25 · ПОЛЕ 1</text><text x="942" y="269">Матч за 3-е место</text></g>
-          <g class="bx out v" data-k="v"><rect x="920" y="348" width="270" height="64" rx="16"/><text class="sm" x="942" y="372">№18 · 11:00 · ПОЛЕ 1</text><text x="942" y="399">Матч за 5-е место</text></g>
-          <g class="bx out s" data-k="s"><rect x="920" y="478" width="270" height="64" rx="16"/><text class="sm" x="942" y="502">№17 · 11:00 · ПОЛЕ 2</text><text x="942" y="529">Матч за 7-е место</text></g>
+          <g class="bx out f" data-k="f"><rect x="920" y="88" width="270" height="64" rx="16"/><text class="sm" x="942" y="112">№20 · 14:30</text><text x="942" y="139" style="font-size:24px;font-weight:600">ФИНАЛ</text></g>
+          <g class="bx out t" data-k="t"><rect x="920" y="218" width="270" height="64" rx="16"/><text class="sm" x="942" y="242">№19 · 13:05</text><text x="942" y="269">Матч за 3-е место</text></g>
+          <g class="bx out v" data-k="v"><rect x="920" y="348" width="270" height="64" rx="16"/><text class="sm" x="942" y="372">№18 · 11:40</text><text x="942" y="399">Матч за 5-е место</text></g>
+          <g class="bx out s" data-k="s"><rect x="920" y="478" width="270" height="64" rx="16"/><text class="sm" x="942" y="502">№17 · 10:15</text><text x="942" y="529">Матч за 7-е место</text></g>
           <!-- cup -->
           <g transform="translate(1122,94) scale(.86)" pointer-events="none"><g class="cup">
             <path d="M14 8h40v16c0 13-9 22-20 22S14 37 14 24z" fill="#E8B84A"/>
@@ -841,7 +869,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <div class="grp rv"><h3>Группа A</h3><div class="seeds"><div><b>1</b><span>A1</span></div><div><b>4</b><span>A2</span></div><div><b>5</b><span>A3</span></div><div><b>8</b><span>A4</span></div></div></div>
       <div class="grp rv" style="transition-delay:.1s"><h3>Группа B</h3><div class="seeds"><div><b>2</b><span>B1</span></div><div><b>3</b><span>B2</span></div><div><b>6</b><span>B3</span></div><div><b>7</b><span>B4</span></div></div></div>
     </div>
-    <p class="bnote rv">Команды делим по силе «змейкой», чтобы группы были ровными. 6 января в группе: первый тур, затем победители играют за 1-е место, проигравшие — за 3-е.</p>
+    <p class="bnote rv">Команды делим по силе «змейкой», чтобы группы были ровными. 8 января в группе: первый тур, затем победители играют за 1-е место, проигравшие — за 3-е.</p>
   </div>
 </section>
 
@@ -861,14 +889,14 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="care">
       <div class="cr dk rv"><svg class="ln-ic" viewBox="0 0 50 50" stroke="#E8B84A" stroke-width="2.6"><path d="M19 6h12v6l4 6v24a3 3 0 0 1-3 3H18a3 3 0 0 1-3-3V18l4-6z"/><path d="M15 26h20"/></svg><b>Спортпитание в раздевалках</b><p>К каждому матчу — вода, изотоники, протеиновые и энергетические батончики.</p></div>
       <div class="cr rv" style="transition-delay:.06s"><svg class="ln-ic" viewBox="0 0 50 50" stroke="#C8322B" stroke-width="2.6"><rect x="8" y="8" width="34" height="36" rx="3"/><path d="M25 8v36M20 26h1M29 26h1"/></svg><b>Командная раздевалка</b><p>У каждой команды — на матч своя, отдельная — у судей.</p></div>
-      <div class="cr rv" style="transition-delay:.12s"><svg class="ln-ic" viewBox="0 0 50 50" stroke="#C8322B" stroke-width="2.6"><rect x="7" y="14" width="36" height="28" rx="4"/><path d="M18 14V9h14v5M25 21v14M18 28h14"/></svg><b>Бригада скорой помощи на каждом матче</b><p>И обязательная страховка от несчастных случаев у каждого игрока.</p></div>
-      <div class="cr rv" style="transition-delay:.18s"><svg class="ln-ic" viewBox="0 0 50 50" stroke="#C8322B" stroke-width="2.6"><circle cx="25" cy="27" r="16"/><path d="M25 27V17M25 27l7 5M21 6h8"/></svg><b>Два судьи, секретарь, хронометрист</b><p>Профессиональное судейство всех 20 матчей: два главных.</p></div>
+      <div class="cr rv" style="transition-delay:.12s"><svg class="ln-ic" viewBox="0 0 50 50" stroke="#C8322B" stroke-width="2.6"><rect x="7" y="14" width="36" height="28" rx="4"/><path d="M18 14V9h14v5M25 21v14M18 28h14"/></svg><b>Медик на каждом матче</b><p>И обязательная страховка от несчастных случаев у каждого игрока.</p></div>
+      <div class="cr rv" style="transition-delay:.18s"><svg class="ln-ic" viewBox="0 0 50 50" stroke="#C8322B" stroke-width="2.6"><circle cx="25" cy="27" r="16"/><path d="M25 27V17M25 27l7 5M21 6h8"/></svg><b>Три судьи, секретарь, хронометрист</b><p>Профессиональное судейство всех 20 матчей: два главных и линейный.</p></div>
       <div class="cr rv" style="transition-delay:.24s"><svg class="ln-ic" viewBox="0 0 50 50" stroke="#C8322B" stroke-width="2.6"><rect x="5" y="14" width="30" height="24" rx="4"/><path d="M35 22l10-5v18l-10-5"/></svg><b>Фото, видео и статистика</b><p>Личные призы: MVP, вратарь, защитник, нападающий, бомбардир, «Джентльмен турнира».</p></div>
     </div>
     <div class="rules rv">
       <div><small>Каждый матч</small><p>3 периода по 15 минут</p></div>
       <div><small>Правила</small><p>ФХР, без силовой борьбы</p></div>
-      <div><small>Ничьих нет</small><p>Овертайм 3 на 3, затем буллиты</p></div>
+      <div><small>Ничьих нет</small><p>Буллиты до первого гола; в матчах за места — сначала овертайм 3 на 3</p></div>
       <div><small>Последние 2 минуты</small><p>«Чистое» время при разнице до 2 шайб</p></div>
       <div><small>Допуск</small><p>Страховка у каждого игрока</p></div>
     </div>
@@ -921,7 +949,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <button data-z="rink" class="rv"><b>2 поля</b><span>56 × 26 м, матчи идут одновременно</span></button>
         <button data-z="stands" class="rv"><b>Трибуны</b><span>для семей и болельщиков</span></button>
         <button data-z="locker" class="rv"><b>11 раздевалок</b><span>своя у каждой команды и у судей</span></button>
-        <button data-z="throw" class="rv"><b>127 м²</b><span>бросковая зона, четверо ворот</span></button>
+        <button data-z="throw" class="rv"><b>127 м²</b><span>бросковая зона — фотостудия «Мама забивает»</span></button>
         <button data-z="cafe" class="rv"><b>Кафе</b><span>панорамные окна на лёд, трансляция на экранах</span></button>
         <button data-z="park" class="rv"><b>Парковка</b><span>своя, у арены</span></button>
       </div>
@@ -930,51 +958,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       <figure class="ph rv-p"><img src="img/facade.jpg" alt="Вход в Ледовую арену Ice Athletics" loading="lazy"><figcaption><b>Вход в арену</b><span>Парковка у входа</span></figcaption></figure>
       <figure class="ph rv-p" style="transition-delay:.08s"><img src="img/rink_logo.jpg" alt="Ледовое поле арены" loading="lazy"><figcaption><b>Поле 56 × 26 м</b><span>Два таких поля</span></figcaption></figure>
       <figure class="ph rv-p" style="transition-delay:.16s"><img src="img/cafe.jpg" alt="Кафе арены" loading="lazy"><figcaption><b>Кафе</b><span>Тепло, чай, трансляция матчей</span></figcaption></figure>
-      <figure class="ph rv-p" style="transition-delay:.24s"><img src="img/lobby.jpg" alt="Холл арены" loading="lazy"><figcaption><b>Холл</b><span>Ярмарка и стенд голосования детей</span></figcaption></figure>
+      <figure class="ph rv-p" style="transition-delay:.24s"><img src="img/lobby.jpg" alt="Холл арены" loading="lazy"><figcaption><b>Холл</b><span>Выставка рисунков и стенд голосования детей</span></figcaption></figure>
     </div>
     <div class="addr rv"><b>Москва, ул. Салтыковская, 1</b><span>восток Москвы</span><a href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%A1%D0%B0%D0%BB%D1%82%D1%8B%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F%2C%201" target="_blank" rel="noopener">Открыть на карте →</a></div>
-  </div>
-</section>
-
-<!-- PARTNERS -->
-<section class="sec dark" id="partners" style="background:var(--navy)">
-  <div class="wrap">
-    <div class="head">
-      <span class="eyebrow rv">Партнёрам</span>
-      <h2 class="rv">Три дня с семьями <em class="g">в самое тёплое время года</em></h2>
-      <p class="lead rv">Не баннер в ленте, а часть праздника, который запомнят дети и взрослые. Аудитория — игроки 25–50 лет с активным образом жизни, их жёны и дети, семьи района и детские хоккейные школы.</p>
-    </div>
-    <div class="pk">
-      <div class="pkc top rv tilt"><div class="gl"></div><small>Титульный партнёр</small><h3>Кубок с вашим именем</h3><div class="pr">300 000 ₽</div>
-        <ul><li>Имя в названии: «Рождественский кубок [бренда]»</li><li>Борта и лёд — по согласованию с ареной</li><li>Логотип в трансляции и на форме призёров</li><li>Упоминания ведущим все три дня</li><li>Вручение кубка победителям</li></ul>
-        <div class="slots"><i></i>1 место</div></div>
-      <div class="pkc rv tilt" style="transition-delay:.08s"><div class="gl"></div><small>Генеральный</small><h3>Рядом с главным</h3><div class="pr">150 000 ₽</div>
-        <ul><li>Логотип на баннерах и афишах</li><li>Логотип в трансляции</li><li>Интеграция в открытие и награждение</li></ul>
-        <div class="slots"><i></i>1 место</div></div>
-      <div class="pkc rv tilt" style="transition-delay:.16s"><div class="gl"></div><small>Официальный</small><h3>Свой в турнире</h3><div class="pr">80 000 ₽</div>
-        <ul><li>Логотип на баннерах и сайте</li><li>Упоминания ведущим</li><li>Стенд в холле</li></ul>
-        <div class="slots"><i></i><i></i><i></i>3 места</div></div>
-      <div class="pkc rv tilt" style="transition-delay:.24s"><div class="gl"></div><small>Номинация</small><h3>Именной приз</h3><div class="pr">50 000 ₽</div>
-        <ul><li>MVP, лучший вратарь или нападающий</li><li>Вручение на льду</li></ul>
-        <div class="slots"><i></i><i></i><i></i>3 номинации</div></div>
-    </div>
-    <div class="zp rv">
-      <div><small>Зоны и продукты</small><h3>Партнёр зоны или товарный партнёр</h3><p class="pr2">По договорённости или продукцией</p></div>
-      <div class="chips"><span>«Детская зона от …»</span><span>«Семейное катание от …»</span><span>Фотозона</span><span>Ярмарка</span><span>Спортпитание в раздевалках</span><span>Подарки детям</span><span>Призы конкурсов</span></div>
-    </div>
-    <div class="aud">
-      <div class="rv"><b data-count="160">0</b><span>игроков 25–50 лет</span></div>
-      <div class="rv" style="transition-delay:.06s"><b>3 дня</b><span>на арене, с 11:00 до вечера</span></div>
-      <div class="rv" style="transition-delay:.12s"><b data-count="20">0</b><span>матчей с вашим брендом</span></div>
-      <div class="rv" style="transition-delay:.18s"><b>0 ₽</b><span>вход — приходят целыми семьями</span></div>
-    </div>
-    <div class="tp rv">
-      <h3>Где виден бренд</h3>
-      <div class="lab">На арене</div>
-      <div class="cl"><span>Борта</span><span>Баннеры и ролл-апы</span><span>Медиаэкраны</span><span>Фотозона</span><span>Зоны и станции квеста</span><span>Раздевалки</span><span>Форма призёров</span><span>Семейные браслеты</span><span>Детские подарки</span><span>Наградная церемония</span></div>
-      <div class="lab">В сети</div>
-      <div class="cl web"><span>Сайт турнира</span><span>Трансляция</span><span>Ролики дня</span><span>Фотоотчёт</span><span>Кадры, которыми делятся команды и семьи</span></div>
-    </div>
   </div>
 </section>
 
@@ -988,9 +974,9 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="qa rv">
       <details><summary>Как заявить команду?<i></i></summary><div class="ans"><p>Приём заявок откроется скоро. В турнире 8 команд, тип команд не ограничиваем: корпоративные, клубные, команды пап юных хоккеистов. Правила — в Положении о турнире.</p></div></details>
       <details open><summary>Сколько стоит вход?<i></i></summary><div class="ans"><p>Для зрителей вход свободный все три дня. Приходите всей семьёй.</p></div></details>
-      <details><summary>Можно прийти с маленькими детьми?<i></i></summary><div class="ans"><p>Да. Турнир задуман для семей: детская зона с аниматорами, квест-паспорт, мастер-классы и подарки. Игры начинаются не рано: 6 января — в 12:00, 7 и 8 января — в 11:00, так что можно выспаться и спокойно доехать.</p></div></details>
-      <details><summary>Где поесть и согреться?<i></i></summary><div class="ans"><p>В кафе арены с панорамными окнами на лёд и на рождественской ярмарке в холле: горячий чай, безалкогольный глинтвейн, выпечка.</p></div></details>
-      <details><summary>Можно ли покататься самим?<i></i></summary><div class="ans"><p>Да, 8 января с 12:25 второе поле отдаём семьям: сначала мастер-класс для детей, потом семейное катание.</p></div></details>
+      <details><summary>Можно прийти с маленькими детьми?<i></i></summary><div class="ans"><p>Да. Турнир задуман для семей: зимний городок с горкой и лабиринтом, аквагрим, мастер-классы, квест-паспорт и уголок для мам с малышами. 8 января первые матчи начинаются в 08:00, 9 января — в 12:15, а финальный день 10 января — в 10:00, финал в 14:30.</p></div></details>
+      <details><summary>Где поесть и согреться?<i></i></summary><div class="ans"><p>В кафе арены с панорамными окнами на лёд. А на улице, в зимнем городке, — домики с горячим чаем и выпечкой, обогреватели и пледы.</p></div></details>
+      <details><summary>Можно ли покататься самим?<i></i></summary><div class="ans"><p>Да, 10 января после закрытия, с 17:10 до 18:10, лёд отдаём семьям: сначала мастер-класс для детей, потом семейное катание.</p></div></details>
       <details><summary>Как добраться?<i></i></summary><div class="ans"><p>Москва, ул. Салтыковская, 1, восток города. У арены есть своя парковка.</p></div></details>
     </div>
   </div>
@@ -1000,12 +986,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 <section class="sec final" id="join">
   <div class="wrap fin-grid">
     <div>
-      <span class="eyebrow rv" style="color:var(--blue)">6–8 января 2027</span>
+      <span class="eyebrow rv" style="color:var(--blue)">8–10 января 2027</span>
       <h2 class="rv" style="margin-top:18px">Встречаемся<br><span>на льду</span></h2>
       <p class="rv">Три дня хоккея, подарков и тёплых встреч. Играет папа — празднует вся семья.</p>
       <div class="hero-cta rv">
         <a href="#program" class="btn btn-red">Смотреть программу <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="#partners" class="btn btn-ghost">Стать партнёром</a>
+        <a href="#teams" class="btn btn-ghost">Заявить команду</a>
       </div>
     </div>
     <svg class="tree rv-s" id="tree" viewBox="0 0 420 460" aria-hidden="true">
@@ -1019,7 +1005,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 
-<footer><div class="wrap"><span>«Рождественский кубок» · семейный хоккейный турнир · 6–8 января 2027</span><span>Ice Athletics · Москва, ул. Салтыковская, 1</span></div></footer>
+<footer><div class="wrap"><span>«Рождественский кубок» · семейный хоккейный турнир · 8–10 января 2027</span><span>Ice Athletics · Москва, ул. Салтыковская, 1</span></div></footer>
 
 <script>
 (function(){
@@ -1075,7 +1061,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   }
 
   // countdown
-  var target=new Date('2027-01-06T12:00:00+03:00').getTime();
+  var target=new Date('2027-01-08T08:00:00+03:00').getTime();
   function pad(n){return (n<10?'0':'')+n}
   function tick(){var s=Math.max(0,Math.floor((target-Date.now())/1000));
     d.getElementById('cd-d').textContent=Math.floor(s/86400);
@@ -1097,35 +1083,6 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       fl.forEach(function(f){f.y+=f.s;f.w+=.01;f.x+=Math.sin(f.w)*.35;if(f.y>H){f.y=-5;f.x=Math.random()*W}cx.beginPath();cx.arc(f.x,f.y,f.r,0,6.283);cx.fill()});}
     requestAnimationFrame(loop);
   })();
-
-  // zones
-  var Z=[
-    {t:'Бросковая зона',tag:'127 м² · четверо ворот',p:'Конкурс «Самый сильный бросок» с радаром скорости в трёх зачётах: дети, мамы, папы. Таблица лидеров на экране, призы лучшим в конце дня.',
-     a:'<path class="dw" pathLength="1" d="M120 40h96v110H120"/><path class="dw" pathLength="1" d="M120 40l20 18h76M120 150l20-18h76M140 58v74"/><path class="dw" pathLength="1" d="M160 58v74M180 58v74M200 58v74M140 82h76M140 108h76" stroke-width="2" opacity=".55"/><g class="acc"><ellipse cx="60" cy="118" rx="18" ry="7" style="fill:#F6D27A;stroke:none"/><path d="M14 104h28M4 118h30M18 132h24" stroke="#7FC4F0" stroke-width="3"/></g>'},
-    {t:'Детская зона',tag:'с аниматорами',p:'Аквагрим в цветах команд, мастер-классы рождественских открыток и плакатов, настольный хоккей. Аниматоры присмотрят за детьми, пока родители смотрят матч.',
-     a:'<path class="dw" pathLength="1" d="M120 30c50 0 88 32 88 72 0 22-18 30-34 26-14-4-22 6-18 18 6 18-10 28-36 28-48 0-88-32-88-72S70 30 120 30z"/><g class="acc"><circle cx="82" cy="78" r="12" style="fill:#E0453D;stroke:none"/><circle cx="122" cy="62" r="12" style="fill:#F6D27A;stroke:none"/><circle cx="162" cy="80" r="12" style="fill:#7FC4F0;stroke:none"/><circle cx="76" cy="122" r="12" style="fill:#F3F6F9;stroke:none"/></g>'},
-    {t:'Рождественская фотозона',tag:'мгновенная печать',p:'Ёлка, настоящий кубок турнира и мгновенная печать семейных снимков в фирменной рамке — сувенир, который уедет домой.',
-     a:'<rect class="dw" pathLength="1" x="30" y="60" width="180" height="116" rx="18"/><path class="dw" pathLength="1" d="M84 60l12-24h48l12 24"/><circle class="dw" pathLength="1" cx="120" cy="118" r="36"/><circle class="dw" pathLength="1" cx="120" cy="118" r="18"/><g class="acc"><circle cx="184" cy="84" r="7" style="fill:#F6D27A;stroke:none"/><path d="M200 26l4 10 10 4-10 4-4 10-4-10-10-4 10-4z" style="fill:#F6D27A;stroke:none"/></g>'},
-    {t:'Рождественская ярмарка',tag:'чай · выпечка · мерч',p:'Горячий чай, безалкогольный глинтвейн, рождественская выпечка и мерч турнира: шарфы, шапки, детские свитеры. Из кафе арены видно лёд.',
-     a:'<path class="dw" pathLength="1" d="M50 80h120v62c0 20-16 34-36 34H86c-20 0-36-14-36-34z"/><path class="dw" pathLength="1" d="M170 96h14c14 0 22 10 22 22s-8 22-22 22h-16"/><path class="dw" pathLength="1" d="M30 186h180"/><g class="acc"><path d="M84 66c-10-12 10-18 0-32M112 66c-10-12 10-18 0-32M140 66c-10-12 10-18 0-32" stroke="#7FC4F0" stroke-width="3"/></g>'},
-    {t:'Семейный лёд',tag:'8 января · с 12:25',p:'8 января с 12:25 второе поле отдаём семьям: мастер-класс для детей от тренеров, затем семейное катание под праздничную музыку.',
-     a:'<path class="dw" pathLength="1" d="M60 30h50v64l70 18c14 4 22 14 22 26v10H52V40c0-6 4-10 8-10z"/><path class="dw" pathLength="1" d="M36 172h180c8 0 12-6 12-12"/><path class="dw" pathLength="1" d="M70 148v24M120 148v24M170 148v24" stroke-width="3"/><g class="acc"><path d="M74 54h26M74 72h26" stroke="#F6D27A" stroke-width="3"/><path d="M8 190h60M90 190h40" stroke="#7FC4F0" stroke-width="3"/></g>'}
-  ];
-  var tabs=d.querySelectorAll('.ztab'), zart=d.getElementById('zart'), zbody=d.getElementById('zbody'), cur=0, ztimer;
-  function setZone(i){
-    if(i===cur&&zart.innerHTML)return; cur=i;
-    tabs.forEach(function(t,k){t.classList.toggle('on',k===i);t.setAttribute('aria-selected',k===i)});
-    zbody.classList.add('out');
-    clearTimeout(ztimer);
-    ztimer=setTimeout(function(){
-      var z=Z[i];
-      d.getElementById('zh').textContent=z.t; d.getElementById('zp').textContent=z.p; d.getElementById('ztag').textContent=z.tag; d.getElementById('zn').textContent='0'+(i+1);
-      zart.classList.remove('go'); zart.innerHTML='<g stroke="#F3F6F9">'+z.a+'</g>'; void zart.getBoundingClientRect(); zart.classList.add('go');
-      zbody.classList.remove('out');
-    },reduce?0:250);
-  }
-  zart.innerHTML='<g stroke="#F3F6F9">'+Z[0].a+'</g>';
-  tabs.forEach(function(t,k){t.addEventListener('click',function(){setZone(k)})});
 
   // scroll-driven
   var nav=d.getElementById('nav'), prog=d.getElementById('progress'), hs=d.querySelector('.hs'), track=d.getElementById('track'), hsbar=d.getElementById('hsbar'), hsd=d.querySelectorAll('#hsdays span');
